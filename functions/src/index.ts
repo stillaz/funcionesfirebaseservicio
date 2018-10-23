@@ -114,7 +114,7 @@ exports.registro = functions.https.onRequest((req, res) => {
 
     const db = admin.firestore();
 
-    db.doc('servicioscliente').create({
+    db.collection('registros').add({
         negocio: negocio,
         empresa: empresa,
         direccion: direccion,
